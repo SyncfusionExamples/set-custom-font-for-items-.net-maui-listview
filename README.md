@@ -1,2 +1,1 @@
-# set-custom-font-for-items-.net-maui-listview
-How to set custom font for items loaded in .NET MAUI ListView (SfListView) ?
+**[View document in Syncfusion .NET MAUI Knowledge Base](https://www.syncfusion.com/kb/13198/how-to-set-custom-font-for-items-loaded-in-net-maui-listview-sflistview)**
