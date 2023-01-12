@@ -1,4 +1,4 @@
-﻿using Syncfusion.Maui.ListView.Hosting;
+﻿using Syncfusion.Maui.Core.Hosting;
 
 namespace ListViewMaui;
 
@@ -15,7 +15,7 @@ public static class MauiProgram
 				fonts.AddFont("Satisfy-Regular.ttf", "SatisfyRegular");
 			});
 
-		builder.ConfigureSyncfusionListView();
+		builder.ConfigureSyncfusionCore();
 		return builder.Build();
 	}
 }
