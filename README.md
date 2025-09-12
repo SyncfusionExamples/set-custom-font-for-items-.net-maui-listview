@@ -1,1 +1,32 @@
 **[View document in Syncfusion .NET MAUI Knowledge Base](https://www.syncfusion.com/kb/13198/how-to-set-custom-font-for-items-loaded-in-net-maui-listview-sflistview)**
+
+## Sample
+
+```xaml
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="ListViewMaui.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ListViewMaui"
+             xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"   
+             BackgroundColor="White">
+
+    <ContentPage.BindingContext>
+        <local:BooksViewModel />
+    </ContentPage.BindingContext>
+
+    <listView:SfListView x:Name="listView" ItemsSource="{Binding BookInfo}" ItemSize="120">
+        <listView:SfListView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout>
+                    <StackLayout Margin="10,0,0,0" VerticalOptions="StartAndExpand">
+                        <Label Text="{Binding BookName}" FontFamily="Lobster-Regular" FontSize="20" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="{Binding BookDescription}" FontFamily="Satisfy-Regular" FontSize="20" VerticalOptions="StartAndExpand"/>
+                    </StackLayout>
+                    <BoxView HeightRequest="1" BackgroundColor="LightGray"/>
+                </StackLayout>
+            </DataTemplate>
+        </listView:SfListView.ItemTemplate>
+    </listView:SfListView>
+</ContentPage>
+```
