@@ -1,32 +1,22 @@
-**[View document in Syncfusion .NET MAUI Knowledge Base](https://www.syncfusion.com/kb/13198/how-to-set-custom-font-for-items-loaded-in-net-maui-listview-sflistview)**
+# How to set custom font for items loaded in .NET MAUI ListView (SfListView) ?
 
-## Sample
+The [.NET MAUI ListView (SfListView)](https://www.syncfusion.com/maui-controls/maui-listview) provides the capability to enhance item appearance using custom fonts. This guide outlines the steps to implement custom fonts in SfListView.
 
-```xaml
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="ListViewMaui.MainPage"
-             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ListViewMaui"
-             xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"   
-             BackgroundColor="White">
+**Steps**
+1. Add the custom fonts in True Type Font (TTF) format within the Resources’ Fonts folder.
+2. Register these fonts in your application by invoking the **ConfigureFonts** method on the **MauiAppBuilder** object. Use the **AddFont** method to specify the font filename and an optional alias.
+3. Refer to the font name or alias using the **FontFamily** property within your XAML to apply the fonts.
 
-    <ContentPage.BindingContext>
-        <local:BooksViewModel />
-    </ContentPage.BindingContext>
+![Custom fonts in .NET MAUI ListView (SfListView)](https://www.syncfusion.com/uploads/user/kb/maui/maui-2117/maui-2117_img1.png)
 
-    <listView:SfListView x:Name="listView" ItemsSource="{Binding BookInfo}" ItemSize="120">
-        <listView:SfListView.ItemTemplate>
-            <DataTemplate>
-                <StackLayout>
-                    <StackLayout Margin="10,0,0,0" VerticalOptions="StartAndExpand">
-                        <Label Text="{Binding BookName}" FontFamily="Lobster-Regular" FontSize="20" VerticalOptions="CenterAndExpand"/>
-                        <Label Text="{Binding BookDescription}" FontFamily="Satisfy-Regular" FontSize="20" VerticalOptions="StartAndExpand"/>
-                    </StackLayout>
-                    <BoxView HeightRequest="1" BackgroundColor="LightGray"/>
-                </StackLayout>
-            </DataTemplate>
-        </listView:SfListView.ItemTemplate>
-    </listView:SfListView>
-</ContentPage>
-```
+Download the complete sample on [GitHub](https://github.com/SyncfusionExamples/set-custom-font-for-items-.net-maui-listview).
+
+**Conclusion**
+
+I hope you enjoyed learning how to set a custom font for items loaded in .NET MAUI ListView.
+
+You can refer to our [.NET MAUI ListView feature tour](https://www.syncfusion.com/maui-controls/maui-listview) page to learn about its other groundbreaking feature representations and [documentation](https://help.syncfusion.com/maui/listview/getting-started), and how to quickly get started with configuration specifications. Explore our [.NET MAUI ListView example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/ListView) to understand how to create and manipulate data.
+
+For current customers, check out our components from the [License and Downloads](https://www.syncfusion.com/sales/teamlicense) page. If you are new to Syncfusion®, try our 30-day [free trial](https://www.syncfusion.com/downloads/maui) to check out our other controls.
+
+Please let us know in the comments section if you have any queries or require clarification. Contact us through our [support forums](https://www.syncfusion.com/forums), [Direct-Trac](https://support.syncfusion.com/create), or [feedback portal](https://www.syncfusion.com/feedback/maui?control=sflistview). We are always happy to assist you!
